@@ -1,0 +1,1 @@
+# TRiBot scripting gradle template
