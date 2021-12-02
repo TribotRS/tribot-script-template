@@ -11,10 +11,10 @@ public class MyScript implements TribotScript {
 
 	@Override
 	public void execute(final String args) {
-		// Call our shared library class
+		// Example: Call our shared library class
 		SampleHelper.getHello();
 		try {
-			// Load a resource
+			// Example: Load a resource
 			byte[] resourceContents = getClass().getClassLoader().getResourceAsStream("scripts/my-resource.txt").readAllBytes();
 			Log.log(new String(resourceContents));
 		}
