@@ -8,7 +8,7 @@ plugins {
 buildscript {
     configurations {
         classpath {
-            resolutionStrategy.cacheDynamicVersionsFor(5, java.util.concurrent.TimeUnit.MINUTES)
+            resolutionStrategy.cacheDynamicVersionsFor(5, TimeUnit.MINUTES)
         }
     }
     repositories {
