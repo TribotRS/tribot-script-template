@@ -6,6 +6,11 @@ plugins {
 }
 
 buildscript {
+    configurations {
+        classpath {
+            resolutionStrategy.cacheDynamicVersionsFor(5, java.util.concurrent.TimeUnit.MINUTES)
+        }
+    }
     repositories {
         mavenCentral()
         maven("https://gitlab.com/api/v4/projects/20741387/packages/maven")
