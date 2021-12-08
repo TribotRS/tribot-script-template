@@ -26,12 +26,16 @@ If you are running locally, add jars to your .tribot/thirdparty folder and
 this (and TRiBot) will pick them up automatically. Perform a gradle refresh in your IDE after adding.
 
 ## Features
-* Compile scripts for TRiBot using the "build" gradle task
-* Delete your compiled scripts using the "clean" gradle task
-* Pack your scripts into a zip to upload to the repository using repoPackage (or use repoCopy to package them all)
+* Compile scripts for TRiBot using the "build" gradle task (goes to correct location)
+* Delete your compiled scripts using the "clean" gradle task (deletes correct files)
+* Pack your scripts into a zip to upload to the repository using repoPackage (or use repoPackageAll to package them all)
+* Upload your scripts to the repository (see the section below)
 * (IntelliJ only) Debug your scripts through a remote debug config named "Debug TRiBot". This will launch tribot and
 attach a remote debugger so that you can step through your scripts.
 * Update repo scripts
+* Lombok automatically configured
+* JavaFX automatically configured
+* Allatori annotations automatically configured
 
 ## Repository Updating
 ### Update your script on the TRiBot Repository:
@@ -39,3 +43,6 @@ attach a remote debugger so that you can step through your scripts.
    `repoID=1000` . This can take a comma separated list of ids, if you have multiple variants.
 2) Run the `repoUpdate` task in your script gradle project. (or run `repoUpdateAll` in the root project to update 
    every script)
+3) You can optionally log in every time you want to upload (note logging in once is scoped to the Gradle daemon), or 
+   login once and save the login info. Note that if you choose this second option to save your login info, please 
+   ensure your machine is secure. Don't allow people to take your saved info. 
