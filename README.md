@@ -31,3 +31,11 @@ this (and TRiBot) will pick them up automatically. Perform a gradle refresh in y
 * Pack your scripts into a zip to upload to the repository using repoPackage (or use repoCopy to package them all)
 * (IntelliJ only) Debug your scripts through a remote debug config named "Debug TRiBot". This will launch tribot and
 attach a remote debugger so that you can step through your scripts.
+* Update repo scripts
+
+## Repository Updating
+### Update your script on the TRiBot Repository:
+1) Put the script's repository ID in the script's corresponding gradle.properties file with the key repoId. Ex. 
+   `repoID=1000` . This can take a comma separated list of ids, if you have multiple variants.
+2) Run the `repoUpdate` task in your script gradle project. (or run `repoUpdateAll` in the root project to update 
+   every script)
