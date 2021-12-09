@@ -40,7 +40,7 @@ attach a remote debugger so that you can step through your scripts.
 ## Repository Updating
 ### Update your script on the TRiBot Repository:
 1) Put the script's repository ID in the script's corresponding gradle.properties file with the key repoId. Ex. 
-   `repoID=1000` . This can take a comma separated list of ids, if you have multiple variants.
+   `repoId=1000` . This can take a comma separated list of ids, if you have multiple variants.
 2) Run the `repoUpdate` task in your script gradle project. (or run `repoUpdateAll` in the root project to update 
    every script)
 3) You can optionally log in every time you want to upload (note logging in once is scoped to the Gradle daemon), or 
