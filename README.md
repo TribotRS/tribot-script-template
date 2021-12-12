@@ -45,4 +45,12 @@ attach a remote debugger so that you can step through your scripts.
    every script)
 3) You can optionally log in every time you want to upload (note logging in once is scoped to the Gradle daemon), or 
    login once and save the login info. Note that if you choose this second option to save your login info, please 
-   ensure your machine is secure. Don't allow people to take your saved info. 
+   ensure your machine is secure. Don't allow people to take your saved info.
+
+### Versioning
+The version to use is found by the following rules:
+* The task will always use the `scriptVersion` property if set
+* Otherwise, if there is a `scriptVersionIncrement` property, increment the current script version by that 
+* However, if there is a `scriptBaseVersion` property that is greater than the current version, use that instead of 
+  incrementing (to allow going from 1.33 -> 2.0, for example)
+* Finally, if no other rule matched, default to the same version the script was before
