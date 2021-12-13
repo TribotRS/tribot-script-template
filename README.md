@@ -50,8 +50,9 @@ attach a remote debugger so that you can step through your scripts.
 
 ### Versioning
 The version to use is found by the following rules:
-* The task will always use the `scriptVersion` property if set
-* Otherwise, if there is a `scriptVersionIncrement` property, increment the current script version by that 
-* However, if there is a `scriptBaseVersion` property that is greater than the current version, use that instead of 
-  incrementing (to allow going from 1.33 -> 2.0, for example)
+* Check if a `scriptVersion` property is set, and use it if so
+* Check if a `scriptBaseVersion` property is set, and use it if it is greater than the current version (to allow 
+  going from 1.33 -> 2.0, for example)
+* Check if a `scriptVersionIncrement` property is set, and increment the current script version by that amount (such 
+  as 0.01)
 * Finally, if no other rule matched, default to the same version the script was before
