@@ -39,6 +39,7 @@ attach a remote debugger so that you can step through your scripts.
 * Allatori annotations automatically configured
 
 ## Repository updating
+Note that `repoPackage` will package your scripts into a zip file inside your project: scripts/[script-module]/build/repo-deploy/[script-module].zip
 ### Update your script on the TRiBot Repository
 1) Put the script's repository ID in the script's corresponding gradle.properties file with the key repoId. Ex. 
    `repoId=1000` . This can take a comma separated list of ids, if you have multiple variants.
