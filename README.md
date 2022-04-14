@@ -1,5 +1,11 @@
 # TRiBot scripting gradle template
 
+## Initial setup
+1) Clone this template/Click 'Use this template' in github
+2) Open with your favorite IDE (IntelliJ recommended)
+3) Make sure gradle is set to use java 11
+4) Perform a gradle refresh
+
 ## Adding a new script
 1) Add a new directory under `scripts`
 2) Open `settings.gradle.kts` under the root directory
