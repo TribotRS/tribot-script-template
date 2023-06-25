@@ -5,6 +5,12 @@
 2) Open with your favorite IDE (IntelliJ recommended)
 3) Make sure gradle is set to use java 11
 4) Perform a gradle refresh
+### Verify Kotlin and Compose versions
+It's a good idea to verify that the version of Kotlin you have installed is compatible with the version of Compose in the template.
+1) Check the [Compose multiplatform](https://github.com/JetBrains/compose-multiplatform/blob/master/VERSIONING.md#kotlin-compatibility) GitHub page to find the version that's compatible your Kotlin version.
+2) Open the `build.gradle.kts` file under the root directory.
+3) In the plugins section, verify that the Kotlin and Compose versions match what you found in step 1.
+4) If you changed anything, perform another gradle refresh.
 
 ## Adding a new script
 1) Add a new directory under `scripts`
