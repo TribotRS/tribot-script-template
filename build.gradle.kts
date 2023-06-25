@@ -2,8 +2,8 @@ import org.tribot.gradle.plugin.TribotPlugin
 
 plugins {
     java
-    kotlin("jvm") version "1.6.10"
-    id("org.jetbrains.compose") version "1.1.0"
+    kotlin("jvm") version "1.8.20"
+    id("org.jetbrains.compose") version "1.4.0"
 }
 
 allprojects {
